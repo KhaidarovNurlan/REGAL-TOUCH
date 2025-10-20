@@ -458,7 +458,7 @@ function App() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-gray-900 mb-1">Адрес</h4>
-                      <p className="text-gray-600">...</p>
+                      <p className="text-gray-600">Астана, Казахстан</p>
                     </div>
                   </div>
 
@@ -468,7 +468,7 @@ function App() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-gray-900 mb-1">Телефон</h4>
-                      <p className="text-gray-600">...</p>
+                      <p className="text-gray-600">+77717003880</p>
                     </div>
                   </div>
 
@@ -478,7 +478,7 @@ function App() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600">...</p>
+                      <p className="text-gray-600">Gtysgtykova@gmail.com</p>
                     </div>
                   </div>
 
@@ -501,61 +501,70 @@ function App() {
                   Напишите нам
                 </h3>
 
-                <form className="space-y-4">
+                <form
+                  className="space-y-4"
+                  onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                    e.preventDefault();
+                    const form = e.currentTarget;
+
+                    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+                    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+                    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+                    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+                    const text = `Здравствуйте!%0AИмя: ${name}%0AEmail: ${email}%0AТелефон: ${phone}%0AСообщение: ${message}`;
+                    const phoneNumber = "77717003880";
+                    const url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+                    window.open(url, "_blank");
+                  }}
+                >
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Ваше имя
                     </label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                       placeholder="Иван Иванов"
                     />
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email
                     </label>
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                       placeholder="ivan@example.com"
                     />
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Телефон
                     </label>
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                      placeholder="+7 (XXX) XXX-XX-XX"
+                      placeholder="8 (XXX) XXX-XX-XX"
                     />
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Сообщение
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none"
                       placeholder="Ваше сообщение..."
@@ -569,6 +578,7 @@ function App() {
                     Отправить сообщение
                   </button>
                 </form>
+
               </div>
             </div>
           </div>
