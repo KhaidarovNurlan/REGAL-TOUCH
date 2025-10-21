@@ -307,7 +307,7 @@ function App() {
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
                 <p className="text-xl text-gray-700 font-medium text-center">
                   <p className="text-xl text-gray-700 font-medium text-center">
-                    Если вас интересует информация о других типах красок — например,
+                    Если вас интересует информация обо всех наших типов красок — в том числе
                     <span className="font-semibold"> резиновой, эмалевой, акриловой или грунтовочной</span>,
                     пожалуйста, <a href="#contact" className="text-amber-600 hover:underline">обратитесь к нам (см. Контакты)</a>.
                   </p>
@@ -498,7 +498,7 @@ function App() {
 
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Напишите нам
+                  Напишите нам на Ватсап
                 </h3>
 
                 <form
