@@ -310,7 +310,7 @@ function App() {
                 <p className="text-xl text-gray-700 font-medium text-center">
                   Если вас интересует информация о других типах красок — например,
                   <span className="font-semibold"> резиновой, эмалевой, акриловой или грунтовочной</span>,
-                  пожалуйста, <a href="#Контакты" className="text-amber-600 hover:underline">обратитесь к нам (см. Контакты)</a>.
+                  пожалуйста, <a href="#contact" className="text-amber-600 hover:underline">обратитесь к нам (см. Контакты)</a>.
                 </p>
               </p>
             </div>
