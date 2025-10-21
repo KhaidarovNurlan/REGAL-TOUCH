@@ -303,16 +303,16 @@ function App() {
               Наша продукция
             </h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto"></div>
-          </div>
-          <div className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
-              <p className="text-xl text-gray-700 font-medium text-center">
+            <div className="mt-12 max-w-3xl mx-auto">
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
                 <p className="text-xl text-gray-700 font-medium text-center">
-                  Если вас интересует информация о других типах красок — например,
-                  <span className="font-semibold"> резиновой, эмалевой, акриловой или грунтовочной</span>,
-                  пожалуйста, <a href="#contact" className="text-amber-600 hover:underline">обратитесь к нам (см. Контакты)</a>.
+                  <p className="text-xl text-gray-700 font-medium text-center">
+                    Если вас интересует информация о других типах красок — например,
+                    <span className="font-semibold"> резиновой, эмалевой, акриловой или грунтовочной</span>,
+                    пожалуйста, <a href="#contact" className="text-amber-600 hover:underline">обратитесь к нам (см. Контакты)</a>.
+                  </p>
                 </p>
-              </p>
+              </div>
             </div>
           </div>
 
