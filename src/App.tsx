@@ -478,21 +478,10 @@ function App() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600">Gtysgtykova@gmail.com</p>
+                      <p className="text-gray-600">Alistroy86@mail.ru</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="text-amber-600" size={24} />
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="font-bold text-gray-900 mb-1">
-                        Режим работы
-                      </h4>
-                      <p className="text-gray-600">...</p>
-                    </div>
-                  </div>
                 </div>
               </div>
 
